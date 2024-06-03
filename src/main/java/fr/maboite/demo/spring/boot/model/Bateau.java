@@ -2,10 +2,9 @@ package fr.maboite.demo.spring.boot.model;
 
 import java.time.LocalDateTime;
 
-public class Example {
+public class Bateau {
 
 	private Integer id;
-	private String typeExample;
 	private String nom;
 	private LocalDateTime dateCreation;
 
@@ -33,12 +32,4 @@ public class Example {
 		this.dateCreation = dateCreation;
 	}
 
-	public String getTypeExample() {
-		return typeExample;
-	}
-
-	public void setTypeExample(String typeExample) {
-		this.typeExample = typeExample;
-	}
-	
 }
