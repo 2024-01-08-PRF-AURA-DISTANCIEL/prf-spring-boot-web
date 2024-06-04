@@ -1,6 +1,5 @@
-package fr.maboite.model;
+package fr.maboite.demo.spring.boot.model;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,9 +16,6 @@ public class Company {
 	private Integer id;
 	
 	private String name;
-	
-	@Column(name = "titi")
-	private String toto;
 	
 	public Integer getId() {
 		return id;

@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 
-import fr.maboite.model.Company;
+import fr.maboite.demo.spring.boot.model.Company;
 
 /**
  * Classe utilisant JDBC pour communiquer avec la base de données :
