@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import fr.maboite.demo.spring.boot.correction.tp.model.Bateau;
+import fr.maboite.demo.spring.boot.correction.tp.model.BateauCorrection;
 
 @SpringBootTest
 class BateauServiceTest {
@@ -15,7 +15,7 @@ class BateauServiceTest {
 
 	@Test
 	public void testSaveNewBateau() {
-		Bateau bateau = new Bateau();
+		BateauCorrection bateau = new BateauCorrection();
 		String nomBateau = "Mon beau bateau";
 		bateau.setNom(nomBateau);
 		this.bateauService.save(bateau);
@@ -37,7 +37,7 @@ class BateauServiceTest {
 	@Test
 	public void testGet() {
 		int id = 5;
-		Bateau bateau = this.bateauService.get(id);
+		BateauCorrection bateau = this.bateauService.get(id);
 		Assertions.assertNotNull(bateau);
 		Assertions.assertEquals(id, bateau.getId());
 

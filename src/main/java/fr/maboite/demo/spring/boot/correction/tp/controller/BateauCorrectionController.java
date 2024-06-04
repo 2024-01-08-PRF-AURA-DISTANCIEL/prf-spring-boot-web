@@ -17,7 +17,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import fr.maboite.demo.spring.boot.controller.BateauController;
 import fr.maboite.demo.spring.boot.correction.tp.dao.BateauCorrectionDao;
-import fr.maboite.demo.spring.boot.correction.tp.model.Bateau;
+import fr.maboite.demo.spring.boot.correction.tp.model.BateauCorrection;
 
 @RestController
 @RequestMapping("/correction/bateaux")
@@ -29,20 +29,20 @@ public class BateauCorrectionController {
 	private BateauCorrectionDao bateauCorrectionDao;
 
 	@PostMapping
-	public Bateau save(@RequestBody Bateau bateau) {
+	public BateauCorrection save(@RequestBody BateauCorrection bateau) {
 		LOGGER.info("Sauvegarde de Bateau par le contrôleur");
 		bateauCorrectionDao.save(bateau);
 		return bateau;
 	}
 
 	@GetMapping("/{id}")
-	public Bateau get(@PathVariable("id") Integer id) {
+	public BateauCorrection get(@PathVariable("id") Integer id) {
 		LOGGER.info("Récupération de Bateau avec l'id : " + id);
-		Optional<Bateau> bateauOptional = bateauCorrectionDao.findById(id);
+		Optional<BateauCorrection> bateauOptional = bateauCorrectionDao.findById(id);
 		if (bateauOptional.isEmpty()) {
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No bateau found");
 		} else {
-			Bateau bateau = bateauOptional.get();
+			BateauCorrection bateau = bateauOptional.get();
 			return bateau;
 		}
 	}

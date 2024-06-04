@@ -8,7 +8,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Bateau {
+public class BateauCorrection {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

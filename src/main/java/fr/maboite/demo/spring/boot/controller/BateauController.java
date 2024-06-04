@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.maboite.demo.spring.boot.correction.tp.model.Bateau;
+import fr.maboite.demo.spring.boot.correction.tp.model.BateauCorrection;
 import fr.maboite.demo.spring.boot.service.BateauService;
 
 /**
@@ -46,7 +46,7 @@ public class BateauController {
 	 * @return
 	 */
 	@GetMapping("/{id}")
-	public Bateau getById(@PathVariable("id") Integer id) {
+	public BateauCorrection getById(@PathVariable("id") Integer id) {
 		LOGGER.info("Récupération du bateau par le contrôleur, avec l'id : " + id);
 		return bateauService.get(id);
 	}
@@ -63,7 +63,7 @@ public class BateauController {
 	 * @return
 	 */
 	@PostMapping
-	public Bateau save(@RequestBody Bateau bateau) {
+	public BateauCorrection save(@RequestBody BateauCorrection bateau) {
 		LOGGER.info("Sauvegarde du bateau par le contrôleur");
 		bateauService.save(bateau);
 		return bateau;
@@ -91,14 +91,14 @@ public class BateauController {
 	 * @return
 	 */
 	@PostMapping(path = "/custom", consumes = "application/json")
-	public ResponseEntity<Bateau> saveCustom(RequestEntity<Bateau> requestBateau) {
+	public ResponseEntity<BateauCorrection> saveCustom(RequestEntity<BateauCorrection> requestBateau) {
 		LOGGER.info("Sauvegarde du bateau par le contrôleur");
-		Bateau bateau = requestBateau.getBody();
+		BateauCorrection bateau = requestBateau.getBody();
 		
 		
 		LOGGER.info("Le content type demandé est : " + requestBateau.getHeaders().getContentType());
 		
-		ResponseEntity<Bateau> responseEntity = ResponseEntity
+		ResponseEntity<BateauCorrection> responseEntity = ResponseEntity
 			.ok()
 			.header("toto", "truc")
 			.header("titi", "autre truc")
