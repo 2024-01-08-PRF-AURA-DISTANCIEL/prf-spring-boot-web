@@ -11,11 +11,15 @@ import jakarta.persistence.Id;
 @Entity // Décrit une entité persistable
 public class Company {
 
+	public static final int MAX_CA = 4_000_000;
+
 	@Id // Décrit l’attribut servant d'identifiant et la clé primaire
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // décrit la méthode de génération de l’identifiant
 	private Integer id;
 
 	private String name;
+	
+	private Integer cash;
 
 	public Integer getId() {
 		return id;
@@ -32,5 +36,15 @@ public class Company {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	public Integer getCash() {
+		return cash;
+	}
+
+	public void setCash(Integer cash) {
+		this.cash = cash;
+	}
+	
+	
 
 }
