@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.maboite.demo.spring.boot.model.Bateau;
+import fr.maboite.demo.spring.boot.correction.tp.model.Bateau;
 import fr.maboite.demo.spring.boot.service.BateauService;
 
 /**

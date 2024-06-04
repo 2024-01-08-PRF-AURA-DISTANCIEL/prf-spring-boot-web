@@ -6,7 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import fr.maboite.demo.spring.boot.model.Bateau;
+import fr.maboite.demo.spring.boot.correction.tp.model.Bateau;
 
 @Component
 public class BateauService {

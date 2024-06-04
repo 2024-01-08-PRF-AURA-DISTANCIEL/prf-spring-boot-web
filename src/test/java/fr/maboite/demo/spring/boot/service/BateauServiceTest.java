@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import fr.maboite.demo.spring.boot.model.Bateau;
+import fr.maboite.demo.spring.boot.correction.tp.model.Bateau;
 
 @SpringBootTest
 class BateauServiceTest {

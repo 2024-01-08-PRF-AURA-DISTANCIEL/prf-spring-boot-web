@@ -1,9 +1,17 @@
-package fr.maboite.demo.spring.boot.model;
+package fr.maboite.demo.spring.boot.correction.tp.model;
 
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Bateau {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nom;
 	private LocalDateTime dateCreation;

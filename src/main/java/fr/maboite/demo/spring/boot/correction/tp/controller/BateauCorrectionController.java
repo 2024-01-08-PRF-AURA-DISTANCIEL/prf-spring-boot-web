@@ -17,7 +17,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import fr.maboite.demo.spring.boot.controller.BateauController;
 import fr.maboite.demo.spring.boot.correction.tp.dao.BateauCorrectionDao;
-import fr.maboite.demo.spring.boot.model.Bateau;
+import fr.maboite.demo.spring.boot.correction.tp.model.Bateau;
 
 @RestController
 @RequestMapping("/correction/bateaux")
