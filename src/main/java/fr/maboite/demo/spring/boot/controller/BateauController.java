@@ -65,6 +65,7 @@ public class BateauController {
 	@PostMapping
 	public Bateau save(@RequestBody Bateau bateau) {
 		LOGGER.info("Sauvegarde du bateau par le contrôleur");
+		LOGGER.debug(bateau.getNom());
 		bateauService.save(bateau);
 		return bateau;
 	}
