@@ -13,7 +13,7 @@ public class BateauService {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(BateauService.class);
 	
-	private Integer nextId = 1;
+	private Long nextId = 1L;
 	
 	/**
 	 * Sauvegarde un bateau.
@@ -51,7 +51,7 @@ public class BateauService {
 		LOGGER.info("Récupération du bateau avec l'id : " + id);
 		
 		Bateau bateau = new Bateau();
-		bateau.setId(id);
+		bateau.setId(Long.valueOf(id));
 		bateau.setNom("Nouveau bateau");
 		return bateau;
 	}
