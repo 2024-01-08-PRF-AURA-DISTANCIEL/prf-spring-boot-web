@@ -1,5 +1,7 @@
 package fr.maboite.demo.spring.boot.dao;
 
+import java.util.List;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,7 +57,19 @@ public class CompanyDaoTest {
 		Assertions.assertNotNull(savedCompany.getCompanyType());
 		
 	}
-	
-	
+
+	@Test
+	public void testGetCompaniesParNameEgalMonEntreprise() {
+		//ARRANGE
+		Company company = new  Company();
+		company.setName("Mon entreprise");
+		Company savedCompany = companyDao.save(company);
+		//ACT
+		List<Company> companies = companyDao.getCompanyByName("Mon entreprise");
+		//ASSERT
+		Assertions.assertEquals(1, companies.size());
+		Company loadedCompany = companies.get(0);
+		Assertions.assertEquals("Mon entreprise", loadedCompany.getName());
+	}
 	
 }

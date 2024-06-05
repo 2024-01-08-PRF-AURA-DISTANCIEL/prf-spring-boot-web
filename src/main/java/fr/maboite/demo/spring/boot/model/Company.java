@@ -1,5 +1,6 @@
 package fr.maboite.demo.spring.boot.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -23,6 +24,7 @@ public class Company {
 
 	private String name;
 	
+	@Column(name = "sousous")
 	private Integer cash;
 	
 	@Enumerated(EnumType.STRING)
