@@ -1,11 +1,14 @@
 package fr.maboite.demo.spring.boot.correction.tp.model;
 
 import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Set;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class BateauCorrection {
@@ -16,6 +19,9 @@ public class BateauCorrection {
 	private String nom;
 	private LocalDateTime dateCreation;
 	private Integer capacite;
+
+	@OneToMany(mappedBy = "bateau")
+	private Set<CroisiereCorrection> croisieres = new HashSet<>();
 
 	public Integer getId() {
 		return id;
@@ -47,6 +53,14 @@ public class BateauCorrection {
 
 	public void setCapacite(Integer capacite) {
 		this.capacite = capacite;
+	}
+
+	public Set<CroisiereCorrection> getCroisieres() {
+		return croisieres;
+	}
+
+	public void setCroisieres(Set<CroisiereCorrection> croisieres) {
+		this.croisieres = croisieres;
 	}
 
 }

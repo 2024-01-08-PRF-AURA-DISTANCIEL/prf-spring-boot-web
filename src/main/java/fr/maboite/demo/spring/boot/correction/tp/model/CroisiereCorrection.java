@@ -23,13 +23,13 @@ public class CroisiereCorrection {
 
 	/**
 	 * ManyToOne et JoinColumn indiquent que l'entité reservation liée doit être
-	 * persistée dans la colonne RESERVATION_ID , en prenant en compte l'identifiant
-	 * de l'entité reservation. JoinColumn n'est pas obligatoire. ATtention, par
+	 * persistée dans la colonne BATEAU_ID , en prenant en compte l'identifiant
+	 * de l'entité bateau. JoinColumn n'est pas obligatoire. ATtention, par
 	 * défaut le fetchType est EAGER
 	 */
 	@ManyToOne
-	@JoinColumn(name = "RESERVATION_ID")
-	private ReservationCorrection reservation;
+	@JoinColumn(name = "BATEAU_ID")
+	private BateauCorrection bateau;
 
 	public Long getId() {
 		return id;
@@ -79,12 +79,13 @@ public class CroisiereCorrection {
 		this.portArrivee = portArrivee;
 	}
 
-	public ReservationCorrection getReservation() {
-		return reservation;
+	public BateauCorrection getBateau() {
+		return bateau;
 	}
 
-	public void setReservation(ReservationCorrection reservation) {
-		this.reservation = reservation;
+	public void setBateau(BateauCorrection bateau) {
+		this.bateau = bateau;
 	}
 
+	
 }
