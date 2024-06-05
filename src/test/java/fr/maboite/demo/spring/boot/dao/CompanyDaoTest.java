@@ -52,8 +52,10 @@ public class CompanyDaoTest {
 		Company savedCompany = companyDao.save(company);
 		
 		//ASSERT
-		Assertions.assertNotNull(company.getCompanyType());
+		Assertions.assertNotNull(savedCompany.getCompanyType());
 		
 	}
+	
+	
 	
 }

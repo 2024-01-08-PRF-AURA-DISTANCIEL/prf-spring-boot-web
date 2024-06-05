@@ -15,6 +15,7 @@ public class BateauCorrection {
 	private Integer id;
 	private String nom;
 	private LocalDateTime dateCreation;
+	private Integer capacite;
 
 	public Integer getId() {
 		return id;
@@ -38,6 +39,14 @@ public class BateauCorrection {
 
 	public void setDateCreation(LocalDateTime dateCreation) {
 		this.dateCreation = dateCreation;
+	}
+
+	public Integer getCapacite() {
+		return capacite;
+	}
+
+	public void setCapacite(Integer capacite) {
+		this.capacite = capacite;
 	}
 
 }

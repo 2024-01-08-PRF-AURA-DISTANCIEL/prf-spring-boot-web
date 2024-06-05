@@ -72,6 +72,9 @@ public class Company {
 		this.companyType = companyType;
 	}
 	
+	public void associeAvec(CompanyType companyType) {
+		this.companyType = companyType;
+		companyType.getCompanies().add(this);
+	}
 	
-
 }
